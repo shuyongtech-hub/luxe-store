@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Premium Lifestyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Outfit:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages/home/style.css"></head>
+<body>
+    <!-- Overlay for mobile menu -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Search Modal Overlay -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search for products, categories..." autocomplete="off">
+                <button id="close-search" aria-label="Close search"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results-container">
+                <!-- Results dynamic -->
+            </div>
+        </div>
+    </div>
+   <head></head>
+    <!-- Side Menu -->
+    <aside id="side-menu" class="side-menu">
+        <div class="side-menu-header">
+            <span class="logo-text">LUXE</span>
+            <button id="close-menu" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="side-nav">
+            <a href="#" class="side-nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="#" class="side-nav-link"><i class="fas fa-th-large"></i> Collections</a>
+            <a href="#" class="side-nav-link"><i class="fas fa-bolt"></i> New Arrivals</a>
+            <a href="#" class="side-nav-link"><i class="fas fa-user"></i> Account</a>
+            <a href="#" class="side-nav-link"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-left">
+                <button id="menu-trigger" class="icon-btn" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="../../index.html" class="logo">LUXE</a>
+            </div>
+            
+            <nav class="desktop-nav">
+                <a href="#" id="nav-home" class="active">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Collections</a>
+                <a href="#">Journal</a>
+            </nav>
+
+            <div class="header-right">
+                <button id="search-trigger" class="icon-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="cart-trigger" class="icon-btn cart-btn" aria-label="View Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Defining Modern Essentials</h1>
+                <p>Curated collections for the contemporary lifestyle.</p>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <div class="catalog-header">
+                <h2>Featured Collection</h2>
+                <p>Carefully selected items for your wardrobe.</p>
+            </div>
+            <div id="productGrid" class="product-grid">
+                <!-- Products injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-page" class="cart-page hidden">
+        <div class="cart-container">
+            <div class="cart-header">
+                <button id="back-to-shop" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </button>
+                <h2>Your Shopping Bag</h2>
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-items-wrapper">
+                    <ul id="cart-items-list" class="cart-items-list"></ul>
+                    <div id="empty-cart-msg" class="empty-msg hidden">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Your bag is currently empty.</p>
+                        <button id="home-trigger" class="btn-primary">Browse Products</button>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Calculated at checkout</span>
+                    </div>
+                    <hr>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+<script src="pages/home/script.js"></script></body></html>
